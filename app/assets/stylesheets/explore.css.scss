@@ -1,0 +1,43 @@
+// Place all the styles related to the explore controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+#degreeBox {
+	width: 1000px;
+	height: 650px;
+	border: 3px solid black;
+	margin-bottom: 3in;
+}
+
+
+.box {
+	width: 100px;
+	height: 250px;
+	border: 1px solid black;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+.bigBox {
+	width: 800px;
+	height: 250px;
+	border: 1px solid purple;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+.opt {
+	width: 80px;
+	height: 30px;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-left: 10px;
+	display: none;
+}
+
+

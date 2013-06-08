@@ -1,0 +1,51 @@
+
+
+<div id="degreeBox">
+	Degree
+
+	<table>
+		<tr>
+
+ 			<% @degree.reqs.each do |req| %>
+ 				<td>
+ 					<% if req.name=="Major" then next end %>
+ 					<div class="box">
+ 						<%= req.name %>
+ 						<button type="button" onclick="ShowOptions(event)">
+ 							Show Options
+ 						</button>
+
+ 						<% req.options.each do |option| %>
+ 							<button type="button" class="opt" onclick="ClickOne(event)">
+ 								<%= option.name %>
+ 							</button>
+ 						<% end %>
+ 					</div>
+ 				</td>
+ 			<% end %>
+
+		</tr>
+	</table>
+
+
+	<div class = "bigBox">
+		<%= @major.name %>
+		<button type="button" onclick="ShowOptions(event)">
+			Show Majors
+		</button>
+
+		<% @major.options.each do |option| %>
+			<button type="button" class="major opt" onclick="ClickOne(event)">
+				<%= option.name %>
+			</button>
+		<% end %>
+	</div>
+
+
+
+
+
+
+</div>
+
+
