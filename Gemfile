@@ -8,11 +8,9 @@ gem 'rails', '3.2.13'
 
 #changed from sqlite3 to pg for production
 #changed back against heroku's reccomendation b/c pg didn't work
-gem 'sqlite3', :group => [:development, :test]
-group :production do
-  gem 'thin'
-  gem 'pg'
-end
+#went to only gem 'sqlite3'
+gem 'sqlite3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
