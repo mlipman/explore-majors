@@ -11,12 +11,12 @@
  					<% if req.name=="Major" then next end %>
  					<div class="box">
  						<%= req.name %>
- 						<button type="button" onclick="ShowOptions(event)">
+ 						<button type="button" onclick="ShowOptions(event, 'block')">
  							Show Options
  						</button>
 
  						<% req.options.each do |option| %>
- 							<button type="button" class="opt" onclick="ClickOne(event)">
+ 							<button type="button" class="opt" onclick="ClickOne(event, 'block')">
  								<%= option.name %>
  							</button>
  						<% end %>
@@ -30,22 +30,39 @@
 
 	<div class = "bigBox">
 		<%= @major.name %>
-		<button type="button" onclick="ShowOptions(event)">
+		<button type="button" onclick="ShowOptions(event, 'inline')">
 			Show Majors
 		</button>
 
 		<% @major.options.each do |option| %>
-			<button type="button" class="major opt" onclick="ClickOne(event)">
+			<button type="button" class="major opt" onclick="ClickOne(event, 'inline', '<%= option.name %>')">
 				<%= option.name %>
 			</button>
 		<% end %>
+
+		<table>
+			<tr>
+				<% @symsys.reqs.each do |req| %>
+
+					<td class="subBox">
+						<div class="" >
+							<%= req.name %>
+							<button type="button" onclick="ShowOptions(event, 'block')">
+								Show Options
+							</button>
+
+							<% req.options.each do |option| %>
+								<button type="button" class="opt" onclick="ClickOne(event, 'block')">
+									<%= option.name %>
+								</button>
+							<% end %>
+						</div>
+					</td>
+				<% end %>
+			</tr>
+		</table>
 	</div>
 
 
-
-
-
-
 </div>
-
 
