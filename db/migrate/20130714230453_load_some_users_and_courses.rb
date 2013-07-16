@@ -29,6 +29,10 @@ class LoadSomeUsersAndCourses < ActiveRecord::Migration
   	dude.course_ids = [3, 5, 7, 8, 9, 10];
   	dude.save
 
+    gal = User.new(:name => "Molly", :login => "mollz")
+    gal.course_ids = [7]
+    gal.save
+
   end
 
   def down

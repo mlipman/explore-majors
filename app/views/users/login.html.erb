@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+	<%= flash[:notice] %><br /><br />
+<% else %>
+	Please enter your login<br /><br />
+<% end %>
+
+<%= form_for @user, :url => {:action => :post_login} do |f| %>
+	<table>
+		<tr>
+			<td>login: </td>
+			<td><%= f.text_field(:login) %></td>
+		</tr>
+	</table>
+	<%= submit_tag "Log-in" %>
+<% end %>
