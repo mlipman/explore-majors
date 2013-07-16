@@ -1,5 +1,3 @@
-
-
 <div id="degreeBox">
 	Degree
 
@@ -29,7 +27,7 @@
 
 
 	<div class = "bigBox">
-		<%= @major.name %>
+		<%= link_to @major.name, :action => :major %>
 		<button type="button" onclick="ShowOptions(event, 'inline')">
 			Show Majors
 		</button>

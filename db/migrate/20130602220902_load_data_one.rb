@@ -56,11 +56,17 @@ class LoadDataOne < ActiveRecord::Migration
   	ee.req = major
   	ee.save
 
-  	[1, 2, 3, 4, 5, 6].each do |n|
-  		core = Req.new(:name => "Core#{n}")
-  		core.option = symsys
-  		core.save
-  	end
+
+
+
+
+
+
+  	# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].each do |n|
+  	# 	core = Req.new(:name => "Kore#{n}")
+  	# 	core.option = symsys
+  	# 	core.save
+  	# end
 
   	conc = Req.new(:name => "Concentration")
   	conc.option = symsys
