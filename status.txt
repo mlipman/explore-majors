@@ -1,0 +1,34 @@
+status.txt
+
+trying to use a rake task to input data fro testData.txt into models in my app
+then inspect those simple to see it worked
+need to split and test to know when to make a req and when to make an option and when to save and what parent req and option to use etc
+
+goal from testData
+Rec: core1, parent is symsys option
+option: blad, parent is core1rec
+req
+
+
+
+UPDATE CALTRAIN
+
+got hte rake file working for well formatted class lists
+next step is to add in auto OR processing - done
+
+Next:
+Add a partial for req and/or a partial for opt that can be displayed as needed easily
+Also, make data pages for more majors. Engineering next
+
+EE notes
+I think I need a more complicated model
+Ideally, it would have:
+68 unit minimum accross multiple reqs
+check for WIM, design course
+check that fuundamental 3 is not in cs/ee
+support elective list
+add notes 
+
+Doing now: adding user and course models so you can have users that have courses.
+
+

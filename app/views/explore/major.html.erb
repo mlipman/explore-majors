@@ -1,0 +1,84 @@
+<div class = "soloBox">
+	<%= @major.name %>
+	<button type="button" onclick="ShowOptions(event, 'inline')">
+		Show Majors
+	</button>
+
+	<% @major.options.each do |option| %>
+		<button type="button" class="major opt" onclick="ClickOne(event, 'inline', '<%= option.name %>')">
+			<%= option.name %>
+		</button>
+	<% end %>
+
+	<table>
+		<tr>
+			<% @symsys.reqs.each do |req| %>
+
+				<td class="subBox">
+					<div class="" >
+						<%= req.name %>
+						<button type="button" onclick="ShowOptions(event, 'block')">
+							Show Options
+						</button>
+						<button type="button" onclick="MarkCompleted(event)">
+							Done
+						</button>
+						<button type="button" onclick="MarkNotCompleted(event)">
+							To Do
+						</button>
+
+
+						<% req.options.each do |option| %>
+							<% optionID = "opt" + option.id.to_s %>
+
+
+							<button type="button" class="opt" onclick="ClickOne2(event, 'block', '<%= optionID %>')">
+								<%= option.name %>
+							</button>
+						<% end %>
+					</div>
+				</td>
+			<% end %>
+		</tr>
+		
+	</table>
+			
+	<% @allOptions.each do |opt| %>
+		<% optionID = "opt" + opt.id.to_s %>
+		<div  class="allOptionsList" id="<%= optionID %>" >
+			<%= opt.inspect %>
+			<ul>
+				<% opt.reqs.each do |subreq| %>
+					<li><%= subreq.inspect %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+</div>
+
+<ul id="fullBulletList">
+	<% @symsys.reqs.each do |req| %>
+		<li>
+			Req:<%= req.inspect %>
+			<ul>
+				<% req.options.each do |opt| %>
+					<li>
+						Opt:<%= opt.inspect %>
+						<ul>
+							<% opt.reqs.each do |req2| %>
+								<li>Req2:<%= req2.inspect %></li>
+							<% end %>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+		</li>
+	<% end %>
+</ul>
+
+
+
+
+
+
+
