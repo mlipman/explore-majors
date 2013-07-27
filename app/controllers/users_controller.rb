@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 	def index
 		@users = User.find(:all)
-		@courses = Course.find(:all)
+		@all_courses = Course.find(:all)
+		@id = (params[:id]!=nil)
+		if (@id)
+			@user = User.find(params[:id])
+			@name = @user.name
+		end
 	end 
 
 	def login

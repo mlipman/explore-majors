@@ -11,3 +11,46 @@
  *= require_self
  *= require_tree .
  */
+
+.head {
+	font-family: cursive;
+	color: red;
+	padding: 4px;
+	margin-bottom: 14px;
+}
+
+a.hd1:visited {
+	color: red;
+	text-decoration: none;
+}
+a.hd1:link {
+	color: red;
+	text-decoration: none;
+}
+
+.hd2 {
+	color: green;
+	text-decoration: none;
+	float: right;
+}
+
+.hd3 {
+	float: right;
+	margin-left: 5px;
+}
+
+a.hd4:visited {
+	color: green;
+}
+
+a.hd4:link {
+	color: green;
+}
+
+.foot {
+	border-top: 1px solid blue; 
+	margin-top: 30px;
+	text-align: left;
+	font-family: fantasy;
+	color: blue;
+}

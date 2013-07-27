@@ -31,4 +31,8 @@ add notes
 
 Doing now: adding user and course models so you can have users that have courses.
 
+added login
+next allow logged in users to edit the classes they've taken and plan to take
+maybe have two sets of have many courses, taken and planned
+
 

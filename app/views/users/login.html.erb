@@ -1,9 +1,12 @@
 <% if flash[:notice] %>
-	<%= flash[:notice] %><br /><br />
+	<%= flash[:notice] %>
+<% elsif @loggedIn %>
+	Enter a new login to change users
 <% else %>
-	Please enter your login<br /><br />
+	Please enter your login
 <% end %>
-
+<br />
+<br />
 <%= form_for @user, :url => {:action => :post_login} do |f| %>
 	<table>
 		<tr>

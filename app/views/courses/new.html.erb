@@ -1,0 +1,21 @@
+<% if flash[:notice] %>
+	<%= flash[:notice] %><br /><br />
+<% end %>
+
+<p>Ready to add a new course?!</p>
+<h3>User: </h3><%= @usr.inspect %>
+<h3><%= @usr.name %>'s Courses:</h3>
+<% @usr.courses.each do |course| %>
+	<div><%= course.inspect %></div>
+<% end %>
+<h3>All Courses:</h3>
+<% @all_courses.each do |course| %>
+	<div><%= course.inspect %></div>
+<% end %>
+
+<h3>Add a New Course:</h3>
+<%= form_tag(:action=>:add) do %>
+	<%= label_tag(:courseID, "Enter Course ID: ") %>
+	<%= text_field_tag(:courseID) %>
+	<%= submit_tag ("Submit") %>
+<% end %>
