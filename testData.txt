@@ -1,0 +1,32 @@
+R core1
+	O blad
+		R blad
+		end
+	end
+	O blood
+		R blood
+		end
+	end
+	O blud
+		R blud
+		end
+	end
+end
+R coretoo
+	O foo
+		R ef
+		end
+		R ohone
+		end
+		R ohtwo
+		end
+	end
+	O bar
+		R bee
+		end
+		R ae
+		end
+		R arr
+		end
+	end
+end

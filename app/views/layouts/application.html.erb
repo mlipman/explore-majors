@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Majors2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    lang="en">
+	<head>
+		<title><%= @title %></title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+	  	<%= javascript_include_tag "application" %>
+	  	<%= csrf_meta_tags %>
+	</head>
 
-<%= yield %>
-
-</body>
+	<body>
+		<div class="head">
+			<span class="hd1"><%= link_to "A website has appeared! Enjoy", {:controller => :users, :action => :index}, :class=>:hd1 %></span>
+			<% if @loggedIn %>
+				<span class="hd3"><%= link_to "Logout", {:controller => :users, :action => :logout}, :class=>:hd4 %></span>
+				<span class="hd2">Hi <%= @usr.name + "!" %></span>
+			<% else %>
+				<span class="hd3"><%= link_to "Login", {:controller => :users, :action => :login}, :class=>:hd4 %></span>
+			<% end %>
+			<span class="hd3"><%= link_to "Major ", {:controller => :explore, :action => :major} %></span>
+			
+		</div>
+		<%= yield %>
+		<div class="foot">This page is made possible by Michael Lipman and viewers like you</div>
+	</body>
 </html>

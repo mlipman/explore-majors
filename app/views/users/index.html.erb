@@ -1,0 +1,29 @@
+<% if (!@id) %>
+	<h2>All users: </h2>
+	<ul>
+
+		<% @users.each do |user| %>
+			<li><%= user.inspect %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<h2><%= @name %>'s Classes</h2>
+	<ul>
+		<% @user.courses.each do |course| %>
+			<li><%= course.inspect %></li>
+		<% end %>
+	</ul>
+
+	<p>
+		<%= link_to "Add/Edit Classes", {:controller => :courses, :action => :new} %>
+	</p>
+<% end %>
+	
+<h2>All Courses: </h2>
+<ul>
+
+	<% @all_courses.each do |course| %>
+		<li><%= course.inspect %></li>
+	<% end %>
+</ul>
+
