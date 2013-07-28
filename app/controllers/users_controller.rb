@@ -7,6 +7,17 @@ class UsersController < ApplicationController
 			@user = User.find(params[:id])
 			@name = @user.name
 		end
+		@completed_reqs = Array.new
+		@todo_reqs = Array.new
+		#@completed_reqs << Req.find(15)
+		#@completed_reqs << Req.find(10)
+		Req.find(:all).each do |req|
+			if @usr.completeReq(req)
+				@completed_reqs << req
+			else
+				@todo_reqs << req
+			end
+		end
 	end 
 
 	def login

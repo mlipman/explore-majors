@@ -18,7 +18,22 @@
 		<%= link_to "Add/Edit Classes", {:controller => :courses, :action => :new} %>
 	</p>
 <% end %>
+
+<h2>Completed Reqs</h2>
+<ul>
+	<% @completed_reqs.each do |req| %>
+		<li><%= req.inspect %></li>
+	<% end %>
+</ul>
 	
+
+<h2>Not Completed Reqs</h2>
+<ul>
+	<% @todo_reqs.each do |req| %>
+		<li><%= req.inspect %></li>
+	<% end %>
+</ul>
+
 <h2>All Courses: </h2>
 <ul>
 
