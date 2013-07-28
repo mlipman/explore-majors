@@ -36,3 +36,4 @@ next allow logged in users to edit the classes they've taken and plan to take
 maybe have two sets of have many courses, taken and planned
 
 
+Current: in lair. things working, but not pretty. next: try to add atuo req completion detection on branch detect
