@@ -1,0 +1,152 @@
+1 Intro
+	OR Symsys100
+2 CF1SVCalc
+	OR 10unitAP
+	O Math20s
+		R Math19
+		R Math20
+		R Math21
+	O Math40s
+		R Math41
+		R Math42
+	O Math40sACE
+		R Math41A
+		R Math42A
+	OR Other
+3 CF2MVCalc
+	OR CME100
+	OR CME100A
+	OR Math51
+	OR Math51A
+	OR Math51H
+4 CF3ProbStat
+	OR CS109
+	OR Stat116
+	OR Stat110
+	OR MS&E120
+	OR EE178
+	OR Math151
+	OR CME106
+5A DiscFundA
+	OR CS106A
+	OR Other
+5B DiscFundB
+	OR CS106B
+	OR CS106X
+5C DiscFundC
+	OR CS103
+	OR Phil150
+	OR Phil50E
+6A TechDepthA
+	OR CS107
+	OR CS154
+	OR CS156
+	OR CS161
+	OR Phil151A
+	OR CS157
+	OR Phil151
+	OR Phil152
+	OR Phil154
+	OR CS224M
+	OR Econ160
+	OR MS&E236
+	OR MS&E236H
+	OR MS&E252
+	OR Stats200
+	OR CS228
+6B TechDepthB
+	OR CS107
+	OR CS154
+	OR CS156
+	OR CS161
+	OR Phil151A
+	OR CS157
+	OR Phil151
+	OR Phil152
+	OR Phil154
+	OR CS224M
+	OR Econ160
+	OR MS&E236
+	OR MS&E236H
+	OR MS&E252
+	OR Stats200
+	OR CS228
+7 Phillvl1
+	OR Phil1
+	OR Phil2
+	OR Phil60
+	OR Phil102
+	O IHumPhilSci
+		R IHum10A
+		R IHum10B
+	O IHumFateReason
+		R IHum23A
+		R IHum23B
+	OR IHum67
+	O SLE
+		R SLE91
+		R SLE92
+		R SLE93
+	O Other
+8 Phillvl2
+	OR Phil80
+9 Phillvl3
+	OR Phil162
+	OR Phil164
+	OR Phil166
+	OR Phil167D
+	OR Phil168
+	OR Phil169
+	OR Phil180
+	OR Phil180A
+	OR Phil181
+	OR Phil182
+	OR Phil184
+	OR Phil184B
+	OR Phil184F
+	OR Phil184P
+	OR Phil185
+	OR Phil185B
+	OR Phil186
+	OR Phil187
+	OR Phil188
+	OR Phil189
+10A CogNeuroA
+	OR Psych45
+	OR Psych50
+	OR Psych55
+10B CogNeuroB
+	OR Bio20
+	OR Bio150
+	OR Psych30
+	OR Psych45
+	OR Psych50
+	OR Psych60
+	OR Psych70
+	OR Psych131
+	OR Psych141
+	OR Psych154
+11A LangA
+	OR Ling1
+	OR Ling106
+	OR Ling140
+	OR Psych131
+11B LangB
+	OR Ling110
+	OR Ling120
+	OR Ling130A
+12 Comp
+	OR BioE341
+	OR CS121
+	OR CS221
+	OR CS222
+	OR CS224M
+	OR CS227
+	OR CS228
+	OR CS229
+	OR Ling180
+	OR Ling182
+	OR Psych204
+	OR Psych209
+	OR Psych209A
+	OR Psych239
