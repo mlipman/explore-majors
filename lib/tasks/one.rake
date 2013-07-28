@@ -1,4 +1,4 @@
-desc "Playing around for now"
+desc "Loads symsys data from testSS"
 task :doit => :environment do
 	data = IO.readlines('testSS.txt')
 	symsys = Option.find_by_name("Symbolic Systems")
