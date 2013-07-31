@@ -1,3 +1,16 @@
+$(document).ready(function(){
+	$('.second').hide();
+	$('.wrapper').click(function(){
+		var firstID = "first-req1-" + $(this).attr('id');
+		var secondID = "second-req1-" + $(this).attr('id');		
+		$("#" + firstID).toggle();
+		$("#" + secondID).toggle();
+	});
+
+});
+
+
+
 
 function ShowOptions(e, display) {
 	var soButton = e.srcElement;

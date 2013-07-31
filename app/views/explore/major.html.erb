@@ -56,27 +56,6 @@
 	<% end %>
 </div>
 
-<ul id="fullBulletList">
-	<% @symsys.reqs.each do |req| %>
-		<li>
-			Req:<%= req.inspect %>
-			<ul>
-				<% req.options.each do |opt| %>
-					<li>
-						Opt:<%= opt.inspect %>
-						<ul>
-							<% opt.reqs.each do |req2| %>
-								<li>Req2:<%= req2.inspect %></li>
-							<% end %>
-						</ul>
-					</li>
-				<% end %>
-			</ul>
-		</li>
-	<% end %>
-</ul>
-
-
 
 
 

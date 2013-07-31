@@ -1,11 +1,17 @@
 // Place all the styles related to the explore controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-
-
-
+#orc {
+	border: 1px solid black;
+	//font-size: 2em;
+	th {
+		font-size: 2em;
+		color: red;
+	}
+	td {
+		//color: blue;
+	}
+}
 
 #degreeBox {
 	width: 1000px;
@@ -24,9 +30,9 @@
 }
 
 .bigBox {
-	width: 800px;
-	height: 250px;
-	border: 1px solid purple;
+	width: 80%;
+	border: 3px solid purple;
+	border-radius: 5px;
 	margin-left: 50px;
 	margin-top: 50px;
 
@@ -57,13 +63,81 @@
 	display: none;
 }
 
-#fullBulletList {
-	display: none;
-}
-
 .allOptionsList {
 	display: none;
 	border: 2px dashed red;
 }
+
+.req1{
+
+	margin: 5px;
+	//border: 1px solid #85E085;
+	border: 1px solid #FF6666;
+	width: 30%;
+	padding: 5px;
+	text-align: center;
+	font-family: helvetica, arial, sans-serif;
+	border-radius: 5px;
+	background: #FF6666;
+	//background: #85E085;
+	vertical-align: middle;
+	//display: inline-block; not sure
+
+
+
+
+
+}
+
+.req1.small {
+	margin: 5px;
+	cursor: pointer;
+
+}
+
+.req1.big {
+	height: inherit;
+	//padding: 100px 5px;
+	//display: inline-block;
+}
+
+
+.req1:hover {
+	background: #85E085;
+	border: 1px solid #85E085;
+}
+
+#content {
+	padding: 10px;
+}
+
+.opt1 {
+	display: inline-table;
+	margin-left: 20px;
+}
+
+.second {
+	cursor: pointer;
+
+	table {
+		width: 100%;
+	}
+	tr {
+		width: 100%;
+	}
+	.thirty {
+		width: 30%;
+	}
+	.big {
+		height: 100%;
+		width: 100%;
+		display: inline-table;
+		padding-top: 25%;
+	}
+}
+
+
+
+
 
 
