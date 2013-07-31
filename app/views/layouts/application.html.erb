@@ -16,9 +16,9 @@
 				<span class="hd3"><%= link_to "Logout", {:controller => :users, :action => :logout}, :class=>:hd4 %></span>
 				<span class="hd2">Hi <%= @usr.name + "!" %></span>
 			<% else %>
-				<span class="hd3"><%= link_to "Login", {:controller => :users, :action => :login}, :class=>:hd4 %></span>
+				<!-- <span class="hd3"><%= link_to "Login", {:controller => :users, :action => :login}, :class=>:hd4 %></span> -->
 			<% end %>
-			<span class="hd3"><%= link_to "Major ", {:controller => :explore, :action => :major} %></span>
+			<!-- <span class="hd3"><%= link_to "Major ", {:controller => :explore, :action => :major} %></span> -->
 			
 		</div>
 		<%= yield %>
