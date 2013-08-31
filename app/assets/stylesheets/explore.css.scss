@@ -71,22 +71,49 @@
 .req1{
 
 	margin: 5px;
-	//border: 1px solid #85E085;
-	border: 1px solid #FF6666;
 	width: 30%;
-	padding: 5px;
+	padding-left: 5px;
 	text-align: center;
 	font-family: helvetica, arial, sans-serif;
 	border-radius: 5px;
-	background: #FF6666;
-	//background: #85E085;
+
+
 	vertical-align: middle;
 	//display: inline-block; not sure
 
+	.course_label {
+		display: inline-block;
+		padding: 5px 0px;
+	}
+
+
+	.add_drop {
+		float: right;
+		border-left: 1px solid black;
+		padding: 5px 10px 5px 8px;
+		display: inline-block;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		cursor: pointer;
+	}
 
 
 
 
+}
+
+.req1.completed {
+	background: #85E085; // green
+	.add_drop:hover {
+		background: #FF6666;
+	}
+
+}
+.req1.todo {
+	background: #FF6666; // red
+	.add_drop:hover {
+		background: #85E085;
+	}
 }
 
 .req1.small {
@@ -101,11 +128,6 @@
 	//display: inline-block;
 }
 
-
-.req1:hover {
-	background: #85E085;
-	border: 1px solid #85E085;
-}
 
 #content {
 	padding: 10px;

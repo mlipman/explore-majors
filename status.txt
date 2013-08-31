@@ -37,3 +37,12 @@ maybe have two sets of have many courses, taken and planned
 
 
 Current: in lair. things working, but not pretty. next: try to add atuo req completion detection on branch detect
+
+On greyound:
+Goal is to allow users that are logged in to easily add courses
+On probably courses/new, search to bring up classes, thne have a portion on the right hand side of the button that has a plus or minus on it
+
+
+
+// ADD DROPPING CLASSES AND REAL TIME ALERT/COLOR UPDATES AFTER ACTIONS
+// ALSO LOOK INTO REPEATS IN THE USERS' CLASS LIST

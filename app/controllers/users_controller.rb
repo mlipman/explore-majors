@@ -7,18 +7,49 @@ class UsersController < ApplicationController
 			@user = User.find(params[:id])
 			@name = @user.name
 		end
-		@completed_reqs = Array.new
-		@todo_reqs = Array.new
-		#@completed_reqs << Req.find(15)
-		#@completed_reqs << Req.find(10)
-		Req.find(:all).each do |req|
-			if @usr.completeReq(req)
-				@completed_reqs << req
-			else
-				@todo_reqs << req
+		if (params[:search]!=nil)
+			searchQry = params[:search].upcase
+			@searchResults = Course.search(searchQry)
+		else
+			@searchResults = []
+		end
+		logger.debug "passing in #{searchQry}"
+		if (@loggedIn)
+			@completed_reqs = Array.new
+			@todo_reqs = Array.new
+			Req.find(:all).each do |req|
+				if @usr.completeReq(req)
+					@completed_reqs << req
+				else
+					@todo_reqs << req
+				end
 			end
 		end
 	end 
+
+	def ajaxHandler
+		logger.debug "in ajaxHandler"
+		courses = []
+		searchQry = params[:qry].upcase
+		if searchQry==''
+			render(:partial => "none")
+			return
+		end
+		# ITS GETTING WORSE!!!!!!!!!!!!!!!!>
+		# ERROR ON MATH, S, OTHERS, SEE JS CODE
+		courses = Course.search(searchQry)
+
+		if (courses==[])
+			render(:partial => "fail")
+		else
+			
+			render(partial: "course", collection: courses, as: :course)
+			#render(courses)		
+
+		end
+		#loluwish:
+		# rails magically renders partial course (_course.html.erb), for each course in courses, accessible in the partial as @course
+	end
 
 	def login
 		@user = User.new

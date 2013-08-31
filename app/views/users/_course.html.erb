@@ -1,0 +1,13 @@
+<% done = @usr.courses.exists?(course.id) %>
+<% status = done ? "completed" : "todo" %>
+
+<div class="req1 <%= status %>">
+	<span class="course_label"><%= course.dept %></span>
+	<span class="add_drop">
+		<% if done %>
+			-
+		<% else %>
+			+
+		<% end %>
+	</span>
+</div>

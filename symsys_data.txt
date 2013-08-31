@@ -34,8 +34,8 @@ R CF2MVCalc
 e
 R CF3ProbStat
 	OC CS109
-	OC Stat116
-	OC Stat110
+	OC Stats116
+	OC Stats110
 	OC MS&E120
 	OC EE178
 	OC Math151
