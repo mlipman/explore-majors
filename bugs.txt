@@ -1,0 +1,17 @@
+// ADD DROPPING CLASSES AND REAL TIME ALERT/COLOR UPDATES AFTER ACTIONS
+// ALSO LOOK INTO REPEATS IN THE USERS' CLASS LIST
+see mlipman1 psych45
+but should be cleared up with real classes and reqs model that is privy to double counting
+
+but callback functions not working
+also ms&e doesnt work
+and live search sometimes returns nothing, like math
+search while not logged in doesn't work
+
+register (users/new):
+field with errors goes div, messes up formatting
+on wrong password, login clears (happens in login page too)
+not using rails labels
+
+get purple option headers some text decoration
+set color based on option completion
