@@ -1,56 +1,29 @@
-<% if (!@id) %>
-	<h2 class="hide">All users: </h2>
-	<ul class="hide">
+<div class="users_classes">
+	<h2 class=""><%= @usr.name %>'s Classes</h2>
+	<%= render partial: "course", collection: @usr.courses, as: :course %>
+</div>
 
-		<% @users.each do |user| %>
-			<li><%= user.inspect %></li>
-		<% end %>
-	</ul>
-<% else %>
-	<h2 class=""><%= @name %>'s Classes</h2>
-	<ul class="">
-		<% @user.courses.each do |course| %>
-			<li><%= course.inspect %></li>
-		<% end %>
-	</ul>
-
-	<%= form_tag({:action=>"index"}, :method=>"get") do %>
-		<%= label_tag(:q, "Search for Classes") %>
-		<%= text_field_tag("search") %>
-	<% end %>
-
-	<div id="search_results">
-			<%= render partial: "course", collection: @searchResults, as: :course  %>
-	</div>
-
-	<p>
-		<%= link_to "Add/Edit Classes", {:controller => :courses, :action => :new} %>
-	</p>
+<%= form_tag({:action=>"index"}, :method=>"get") do %>
+	<%= label_tag(:q, "Search for Classes") %>
+	<%= text_field_tag("search") %>
 <% end %>
 
-<% if @loggedIn %>
-	<span class="">
-		<h2>Completed Reqs</h2>
-		<ul>
-			<% @completed_reqs.each do |req| %>
-				<li><%= req.inspect %></li>
-			<% end %>
-		</ul>
-			
+<div id="search_results">
+		<%= render partial: "course", collection: @searchResults, as: :course  %>
+</div>
 
-		<h2>Not Completed Reqs</h2>
-		<ul>
-			<% @todo_reqs.each do |req| %>
-				<li><%= req.inspect %></li>
-			<% end %>
-		</ul>
-	</span>
-<% end %>
 
-<h2 class="hide">All Courses: </h2>
-<ul class="hide">
-	<% @all_courses.each do |course| %>
-		<li><%= course.inspect %></li>
-	<% end %>
-</ul>
-
+<div class="hide reqs_by_completion">
+	<h2>Completed Reqs</h2>
+	<ul>
+		<% @completed_reqs.each do |req| %>
+			<li><%= req.inspect %></li>
+		<% end %>
+	</ul>
+	<h2>Not Completed Reqs</h2>
+	<ul>
+		<% @todo_reqs.each do |req| %>
+			<li><%= req.inspect %></li>
+		<% end %>
+	</ul>
+</div>

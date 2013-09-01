@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-	attr_accessible :name, :login
+	attr_accessible :name, :login, :password_digest, :salt, :password_confirmation, :password
 	has_and_belongs_to_many :courses
+	validates_confirmation_of :password
 
 	# If a user has completed any of the options for a req
 	# then that user has completed the requirement
@@ -32,4 +33,17 @@ class User < ActiveRecord::Base
 		return flag
 	end
 
+	def password
+		@temp
+	end
+
+	def password=(pword)
+		@temp=pword
+	end
+
+	def password_valid?(pword2)
+		@temp=pword2 + salt # not sure if temp could be tomp
+		@full = Digest::SHA1.hexdigest(@temp)
+		return @full==password_digest
+	end
 end

@@ -46,3 +46,30 @@ On probably courses/new, search to bring up classes, thne have a portion on the 
 
 // ADD DROPPING CLASSES AND REAL TIME ALERT/COLOR UPDATES AFTER ACTIONS
 // ALSO LOOK INTO REPEATS IN THE USERS' CLASS LIST
+
+users can now add and drop classes from search page by hitting + or -
+classes change color to indicate status - but callback functions not working
+also ms&e doesnt work
+and live search sometimes returns nothing, like math
+8/30 closed manage_classes
+open connect_explore
+goals:
+add back login accross whole site, with hashed passwords - done
+add color scheme to explore page - red if not taken, green if taken, cream if logged out - done
+make expore formatting better
+
+
+
+
+coloring in explore is awesome, 
+next add add/drop button to explore - not sure what to do with reqs
+maybe have js use +- in reqs to expand it out
+clean up css
+
+8/31 close connect_explore
+
+unresolved issues:
+next add add/drop button to explore - not sure what to do with reqs
+maybe have js use +- in reqs to expand it out
+clean up css
+also, see bugs

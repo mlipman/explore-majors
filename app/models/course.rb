@@ -17,4 +17,17 @@ class Course < ActiveRecord::Base
 		end
 		return matchedCourses
 	end
+
+	def status(viewre)
+		if viewre.courses.exists?(self.id) then
+			return "completed"
+		else 
+			return "todo" 
+		end
+	end
+
+	def name
+		return dept
+	end
+
 end

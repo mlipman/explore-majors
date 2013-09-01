@@ -1,18 +1,17 @@
+<%= link_to "Register", :action=>:new %><br /><br />
 <% if flash[:notice] %>
 	<%= flash[:notice] %>
-<% elsif @loggedIn %>
-	Enter a new login to change users
 <% else %>
-	Please enter your login
+	Please enter your login and password
+	<!-- <br />try login: demo, password: demo if you don't have an account
+	<br />or register -->
 <% end %>
 <br />
 <br />
 <%= form_for @user, :url => {:action => :post_login} do |f| %>
 	<table>
-		<tr>
-			<td>login: </td>
-			<td><%= f.text_field(:login) %></td>
-		</tr>
+		<tr><td><%= f.label(:login) %></td><td><%= f.text_field(:login) %></td></tr>
+		<tr><td><%= f.label(:password) %></td><td><%= f.password_field(:password) %></td></tr>
 	</table>
 	<%= submit_tag "Log-in" %>
 <% end %>

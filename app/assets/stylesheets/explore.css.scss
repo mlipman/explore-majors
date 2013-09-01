@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #orc {
-	border: 1px solid black;
+	//border: 1px solid black;
 	//font-size: 2em;
 	th {
-		font-size: 2em;
-		color: red;
+		font-size: 1.5em;
+		color: purple;
+		border-bottom: 3px solid #FF6666;
 	}
 	td {
 		//color: blue;
@@ -105,17 +106,20 @@
 .req1.completed {
 	background: #85E085; // green
 	.add_drop:hover {
-		background: #FF6666;
+		background: #FF6666; // red
 	}
 
 }
 .req1.todo {
 	background: #FF6666; // red
 	.add_drop:hover {
-		background: #85E085;
+		background: #85E085; // green
 	}
 }
 
+.req1.visitor {
+	background: #F2ECC2; // cream
+}
 .req1.small {
 	margin: 5px;
 	cursor: pointer;

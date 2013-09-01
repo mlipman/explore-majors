@@ -1,118 +1,74 @@
+<div id="content">
+	<h2><%= @root.name %></h2>
 
+	<% @root.reqs.each do |req1| %>
+		<div class="wrapper" id="<%= req1.id %>">
+			<% if @visit %>
+				<% status = "visitor" %>
+			<% else %>
+				<% status = req1.status(@viewer) %>
+			<% end %>
+			
+			<div id="first-req1-<%= req1.id %>" class="small req1 first <%= status %>">
+				<%= req1.name %>
+			</div>
+			
+			<div class="second" id="second-req1-<%= req1.id %>">
+				<table cellspacing="none">
+					<tr>
+						<td class="thirty">
+							<span id="big-req1-<%= req1.id %>" class="big req1 <%= status %>">
+								<%= req1.name %>
+							</span>
+						</td>
+						<td>
+							<span class="opt1">
+								<table id="orc">
+									<% orc = req1.getORCTable %>
+									<% first = true %>
+									<% orc.each do |vrow| %>
+										<tr>
+											<% if first %>
 
+												<% vrow.each do |d| %>
+													<th><%= d.name %></th>
+												<% end %>
 
-<div class = "bigBox">
-	<div id="content">
-		<h2><%= @root.name %></h2>
-
-		<% @root.reqs.each do |req1| %>
-			<div class="wrapper" id="<%= req1.id %>">
-				<div id="first-req1-<%= req1.id %>" class="small req1 first"><%= req1.name %></div>
-				<div class="second" id="second-req1-<%= req1.id %>">
-					<table cellspacing="none">
-						<tr>
-							<td class="thirty">
-								<span id="big-req1-<%= req1.id %>" class="big req1">
-									<%= req1.name %>
-								</span>
-							</td>
-							<td>
-								<span class="opt1">
-									<table id="orc">
-										<% orc = req1.getORCTable %>
-										<% first = true %>
-										<% orc.each do |vrow| %>
-											<tr>
-												<% if first %>
-													<th>Options:</th>
-													<% vrow.each do |d| %>
-														<th><%= d %></th>
-													<% end %>	
-													<% first = false %>										
-												<% else %>
-													<td>Reqs</td>
-													<% vrow.each do |d| %>
-														<% if !(d=="nll") %>
-															<td class="req1"><%= d %></td>
+												<% first = false %>										
+											<% else %>
+												<% vrow.each do |d| %>
+													<% if !(d=="nll") %>
+														<% if @visit %>
+															<td class="req1 visitor"><%= d.name %></td>
 														<% else %>
-															<td></td>
+															<td class="req1 <%= d.status(@viewer) %>">
 
+	<!-- 															<div class="req1 <%= d.status(@viewer) %>">
+																	<span class="course_label"><%= d.name %></span>
+																	<span class="add_drop">
+																		<% if d.status(@viewer)=="completed" %>
+																			-
+																		<% else %>
+																			+
+																		<% end %>
+																	</span>												
+																</div>  -->
+																<%= d.name %>
+															</td>
 														<% end %>
+													<% else %>
+														<td></td>
 													<% end %>
 												<% end %>
-											</tr>
-										<% end %>
-									</table>
-								</span>
-							</td>
-						</tr>
-					</table>
-				</div>
+											<% end %>
+										</tr>
+									<% end %>
+								</table>
+							</span>
+						</td>
+					</tr>
+				</table>
 			</div>
-		<% end %>
-	</div>
-
+		</div>
+	<% end %>
 </div>
-
-
-
-
-<!-- 
-		for each requirement:
-			<div class="wrapper">
-				<div id="smallreq1"><%#= req1.name %></div>
-				<div id="bigreq1"><%#= req1.name %></div>
-				<div class="opt1">
-					<table>
-						<tr>
-							this row is all the options
-							<%# req1.options.each do |opt1| %>
-								<th><%#= opt1.name %></th>
-							<%# end %>
-
-						</tr>
-						find the opt with the most reqs
-						make that many rows
-
-						in each row, cycle through each opt
-						if that opt doesn't have a req at that level, don't show anything
-
-						<%# max = 0 %>
-						<%# req1.options.each do |opt1| %>
-							<%# num = (opt1.reqs.length + opt1.courses.length) %> 
-							<%# if num>max then max=num end %>
-						<%# end %>
-						now max is the highest number of reqs/classes that an option has
-
-						first we load all the n^2 courses/reqs into arrays
-
-						next we do max rows
-						<%# [1..max].each do |i| %>
-							<tr>
-								<%# req1.options.each do |opt1| %>
-									<%# num = (opt1.reqs.length + opt1.courses.length) %>
-									<%# if i>num then next end %>
-									<%# if i<= opt1.reqs.lenght %>
-
-									<%# end %>
-
-							</tr>
-						<%# end %>
-
-
-					</table>
-
-
-
-				</div>
-			</div>
-
-
- -->
-
-
-
-
-
-
-

@@ -32,7 +32,7 @@ var toggle_class = function(event){
 	var data  = {course_name2: course_name};
 	//array={key1: 'value1',key2:'value2'};
 
-	$.post("/courses/add_drop_button", data, function(){ talk(); }, 'json');
+	$.post("/users/add_drop_button", data, function(){ talk(); }, 'json');
 	$(event.target).parent().toggleClass("todo");
 	$(event.target).parent().toggleClass("completed");
 	var sign = $(event.target).html();

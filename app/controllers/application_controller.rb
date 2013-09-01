@@ -6,11 +6,9 @@ class ApplicationController < ActionController::Base
       @loggedIn = false
   	elsif User.exists?(:login=>session[:currLogin]) then
   		@loggedIn = true
-  	    @usr = User.find_by_login(session[:currLogin])
+      @usr = User.find_by_login(session[:currLogin])
   	else
- 		@loggedIn = "login error"
+      @loggedIn = "login error"
   	end
-
   end
-
 end
