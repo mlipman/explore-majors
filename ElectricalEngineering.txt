@@ -1,0 +1,275 @@
+Electrical Engineering
+R Math_and_Science
+	units min 40
+	R Math
+		R Calculus
+			C Math 41
+			C Math 42
+		end
+		R Multi_variable_calculus
+			O CME
+				C CME 100
+				C CME 102
+			end
+			O Math
+				C Math 52
+				C Math 53
+			end
+		end
+		R Additional_100_level_math
+			OC EE 102B (if not used in depth)
+			OC EE 141
+			OC CME 104
+			OC Math 113
+			OC CS 103
+		end
+		R Statistics_Probability
+			OC EE 178
+			OC CS 109
+		end
+	end
+	R Science
+		units min 12
+		R Physics
+			O 40_series
+				C Physics 41
+				C Physics 43
+			end
+			O 60_series
+				C Physics 61
+				C Physics 63
+			end
+		end
+		R Science_elective
+			********UGHB Figure 3-2********
+		end
+	end
+end
+R Technology_in_society
+	********UGHB Figure 3-3***********
+end
+R Engineering_Topics
+	units min 60
+	R Engineering_Fundamentals
+		R Programming_abstractions
+			OC CS 106B
+			OC CS 106X
+		end
+		Set?
+			2 courses from list in UGHB 3-4
+			at least one is not in EE or CS
+			CS106A is not allowed
+		end
+	end
+	R Writing_in_the_major
+		OC EE 109
+		OC EE 133
+		OC EE 134
+		OC EE 168
+		OC EE 191W* restrictions
+		OC CS 194W
+	end
+	R Core
+		C EE 100
+		C EE 101A
+		C EE 102A
+		C EE 108A
+		R Physics_in_electrical_engineering
+			OC EE 41 * only if not used for engr fundamentals
+			OC ENGR 40P
+		end
+	R Depth
+		O Bio_electronics_and_bio_imaging
+			R Required_course
+				OC EE 101B
+				OC EE 102B
+			end
+			R Design_course
+				OC EE 134 (WIM)
+				OC EE 168 (WIM)
+			end
+			Set, need 4: Electives (need four distinct courses)
+				OC EE 101B
+				OC EE 102B
+				OC EE 134 (WIM)
+				OC EE 168 (WIM)
+				OC EE 122B
+				OC EE 124
+				OC EE 169
+				OC EE 202
+				OC EE 225
+			end
+		end
+		O Circuits_and_devices
+			R Required_course
+				OC EE 101B
+			end
+			R Design_course
+				OC EE 133 (WIM)
+			end
+			Set, need 2: Electives (need four distinct courses)
+				OC EE 114
+				OC EE 116
+				OC EE 122A
+				OC EE 152
+				OC EE 212
+				OC EE 214B
+				OC EE 216
+				OC EE 271
+			end
+		end
+		O Computer_hardware
+			R Required_course
+				OC EE 108B
+			end
+			R Design_course
+				OC EE 109 (WIM)
+				OC EE 152
+			end
+			Set, need 2: Electives (need four distinct courses)
+				OC EE 271
+				OC EE 273
+				OC EE 282
+				OC CS 107
+			end
+		end
+		O Computer_software
+			R Required_course
+				OC EE 101B
+			end
+			R Design_course
+				OC CS 194W
+				OC EE 152
+			end
+			Set, need 2: Electives (need four distinct courses)
+				OC CS 107
+				OC CS 108
+				OC CS 110
+				OC CS 140
+				OC CS 143
+				OC CS 145
+				OC CS 148
+				OC EE 284
+			end
+		end
+		O Energy_and_environment
+			R Required_course
+				OC EE 101B
+				OC EE 108B
+			end
+			R Design_course
+				OC EE 134 (WIM)
+				OC EE 152
+				OC EE 168 (WIM)
+			end
+			Set, need 2: Electives (need four distinct courses)
+				OC EE 116
+				OC EE 134 (WIM)
+				OC EE 151
+				OC EE 263
+				OC EE 292J
+				OC EE 293A
+				OC EE 293B
+				OC CEE 173A
+				OC CEE 176A
+				OC CEE 176B
+				OC ENGR 105
+				OC ENGR 205
+				ME 185
+				MATSCI 156
+			end
+		end
+		O Music
+			R Required_course
+				OC EE 102B
+				OC MUSIC 320
+			end
+			R Design_course
+				OC EE 109 (WIM)
+				OC EE 265
+			end
+			Set, need 3 Electives (need four distinct courses)
+				OC EE 122A
+				OC EE 264
+				OC EE 109 (not listed, but I think it works)
+				OC EE 265
+				OC MUSIC 256A
+				OC MUSIC 256B
+				OC MUSIC 420A
+				OC MUSIC 420B
+				OC MUSIC 421A
+				OC MUSIC 422
+				OC MUSIC 424
+			end
+		O Photonics_solid_state_and_electromagnets
+			R Required_course
+				OC EE 101B
+			end
+			R Design_course
+				OC EE 134 (WIM)
+			end
+			Set, need 2 Electives (need four distinct courses)
+				OC EE 116
+				OC EE 136
+				OC EE 141
+				OC EE 216
+				OC EE 222
+				OC EE 223
+				OC EE 228
+				OC EE 236A
+				OC EE 236B
+				OC EE 242
+				OC EE 247
+			end
+		end
+		O Sinal_processing_communications_and_controls
+			R Required_course
+				OC EE 101B
+			end
+			R Design_course
+				OC EE 133 (WIM)
+				OC EE 169 (WIM)
+				OC EE 262
+				OC EE 265 
+			end
+			Set, need 3 Electives (need four distinct courses)
+				OC EE 124
+				OC EE 133
+				OC EE 168
+				OC EE 169
+				OC EE 179
+				OC EE 261
+				OC EE 262
+				OC EE 263
+				OC EE 264
+				OC EE 265
+				OC EE 276
+				OC EE 278B
+				OC EE 279
+				OC ENGR 105
+				OC ENGR 205
+			end
+		end
+	end
+	Set Depth_Electives
+		may include 2 more engr funds, any cs 193, and any letter graded EE
+		or EE Related courses (minus any previously noted restriction)
+		Fr and So seminars, EE 191 and CS 106A don't count to 60 units.
+	end
+end
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
