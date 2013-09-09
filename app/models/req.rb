@@ -3,6 +3,16 @@ class Req < ActiveRecord::Base
   belongs_to :option
   has_many :options
 
+  # Something like:
+  # belongs_to :req
+  # has_many :reqs
+
+  # and an attribute like parent_type that is either option or req
+
+
+
+
+
   def getORCTable
   	temp = []
   	self.options.each do |option|

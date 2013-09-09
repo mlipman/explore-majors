@@ -73,3 +73,12 @@ next add add/drop button to explore - not sure what to do with reqs
 maybe have js use +- in reqs to expand it out
 clean up css
 also, see bugs
+
+9/4 open require
+big picture:
+new requirement structure that includes unit mins, reqs hav reqs (chunks), sets
+actual classes
+improved rake task
+end vision for this step: top dozen majors with real classes
+timeline: by first class (9/23)
+

@@ -1,7 +1,11 @@
 class Course < ActiveRecord::Base
-	attr_accessible :dept, :num, :title, :desc, :units
+	attr_accessible :dept, :num, :title, :desc, :minUnits, :maxUnits
 	has_and_belongs_to_many :users
 	has_and_belongs_to_many :options
+
+
+
+
 
 	def self.search(qry)
 		matchedCourses = []
