@@ -1,0 +1,8 @@
+<% root.reqs.each do |req1| %>
+	<%= render partial: "wrap", locals: {req1: req1, show_orc: true} %>
+<% end %>
+
+
+<% root.chunks.each do |ch| %>
+	<%= render partial: "wrap", locals: {req1: ch, show_orc: false} %>
+<% end %>

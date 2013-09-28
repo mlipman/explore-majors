@@ -1,0 +1,29 @@
+<table id="orc">
+	<% orc = req1.getORCTable %>
+	<% first = true %>
+	<% orc.each do |vrow| %>
+		<tr>
+			<% if first %>
+				<% vrow.each do |d| %>
+					<th><%= d.name %></th>
+				<% end %>
+
+				<% first = false %>										
+			<% else %>
+				<% vrow.each do |d| %>
+					<% if !(d=="nll") %>
+						<% if @visit %>
+							<td class="req1 visitor"><%= d.name %></td>
+						<% else %>
+							<td class="req1 <%= d.status(@viewer) %>">
+								<%= d.name %>
+							</td>
+						<% end %>
+					<% else %>
+						<td></td>
+					<% end %>
+				<% end %>
+			<% end %>
+		</tr>
+	<% end %>
+</table>

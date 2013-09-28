@@ -1,6 +1,8 @@
 class Req < ActiveRecord::Base
-  attr_accessible :name
+  # added opt_parent flag and belongs to chunk
+  attr_accessible :name, :opt_parent
   belongs_to :option
+  belongs_to :chunk
   has_many :options
 
   # Something like:
@@ -8,6 +10,7 @@ class Req < ActiveRecord::Base
   # has_many :reqs
 
   # and an attribute like parent_type that is either option or req
+
 
 
 

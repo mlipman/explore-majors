@@ -1,0 +1,25 @@
+O Electrical_Engineering
+	Ch Math_Science
+		Ch Math
+			R SV_Calc
+				O 40s
+					C Math41
+					C Math42
+				end
+			end
+			R MV_Calc
+				OC Math51
+				OC CME100
+			end
+		end
+		R Science
+			OC Sci100
+		end
+	end
+	R TIS
+		OC TIS100
+	end
+	R ET
+		OC ENGR100
+	end
+end

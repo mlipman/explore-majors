@@ -11,14 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130831205150) do
+ActiveRecord::Schema.define(:version => 20130907051720) do
+
+  create_table "chunks", :force => true do |t|
+    t.string   "name"
+    t.integer  "option_id"
+    t.integer  "chunk_id"
+    t.integer  "opt_parent"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "dept"
     t.string   "num"
     t.string   "title"
     t.text     "desc"
-    t.integer  "units"
+    t.integer  "minUnits"
+    t.integer  "maxUnits"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -45,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20130831205150) do
     t.integer  "option_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "chunk_id"
+    t.integer  "opt_parent"
   end
 
   create_table "sessions", :force => true do |t|

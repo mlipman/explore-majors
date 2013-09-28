@@ -3,7 +3,65 @@ task :doit => :environment do
 	data = IO.readlines('symsys_data.txt')
 	symsys = Option.find_by_name("Symbolic Systems")
 	process(0, data, symsys)
+end
 
+task :dochunks => :environment do
+	data = IO.readlines('chunk_test.txt')
+	major = Req.find_by_name('Major')
+	process_chunks(0, data, major, 'req')
+end
+
+def process_chunks(i, data, parent, parent_type)
+	while (i<(data.length))
+		puts i
+		line = data[i]
+		pieces = line.split(' ')
+		case pieces[0]
+		when 'O'
+			opt = Option.new(:name => pieces[1])
+			opt.req = parent
+			opt.save
+			i = process_chunks(i+1, data, opt, 'opt')
+		when 'Ch'
+			chunk = Chunk.new(:name => pieces[1])
+			if (parent_type=='opt')
+				chunk.opt_parent = 1
+				chunk.option = parent
+			else
+				chunk.opt_parent = 0
+				chunk.chunk = parent
+			end
+			chunk.save
+			i = process_chunks(i+1, data, chunk, 'chunk')
+		when 'R'
+			reqq = Req.new(:name => pieces[1])
+			if (parent_type=='opt')
+				reqq.opt_parent = 1
+				reqq.option = parent
+			else
+				reqq.opt_parent = 0
+				reqq.chunk = parent
+			end
+			reqq.save
+			i = process_chunks(i+1, data, reqq, 'req') # parent type isn't used
+		when 'C'
+			full = pieces[1]
+			course = Course.new(:dept=>full) # TODO find course by dept and num
+			parent.courses << course
+			parent.save
+			i+=1
+		when 'OC'
+			opt = Option.new(:name => pieces[1])
+			opt.req = parent
+			course = Course.new(:dept => pieces[1])
+			opt.courses << course
+			opt.save
+			course.save
+			i+=1
+		else
+			return i+1
+		end
+	end
 end
 
 def process(i, data, parent)
@@ -15,7 +73,7 @@ def process(i, data, parent)
 		pieces = line.split(' ')
 		puts "pieces: #{pieces}"
 		if pieces[0]=='R'
-			puts "heer with parent is #{parent}"
+			#puts "heer with parent is #{parent}"
 			# making a new req parent was passed in
 			req = Req.new(:name => pieces[1])
 			req.option = parent

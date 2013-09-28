@@ -4,8 +4,9 @@ class Option < ActiveRecord::Base
   has_many :reqs
   has_and_belongs_to_many :courses
 
+  # added
+  has_many :chunks
 
 
 
-  
 end

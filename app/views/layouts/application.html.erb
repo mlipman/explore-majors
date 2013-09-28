@@ -11,7 +11,7 @@
 
 	<body>
 		<div class="head">
-			<span class="hd1"><%= link_to "A website has appeared! Enjoy", {:controller => :explore, :action => :index}, :class=>:hd1 %></span>
+			<span class="hd1"><%= link_to "Welcome!", {:controller => :explore, :action => :index}, :class=>:hd1 %></span>
 			<% if @loggedIn %>
 				<span class="hd3"><%= link_to "Logout", {:controller => :users, :action => :logout}, :class=>:hd4 %></span>
 				<span class="hd2">Hi <%= link_to @usr.name + "!", {:controller => :users, :action => :index}, :class=>:hd4 %></span>

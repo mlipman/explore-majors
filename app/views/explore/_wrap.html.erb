@@ -1,0 +1,14 @@
+<% @count += 1 %>
+<div class="wrapper" id="<%= @count %>">
+	<% if @visit %>
+		<% status = "visitor" %>
+	<% else %>
+		<% status = req1.status(@viewer) %>
+	<% end %>
+	
+	<div id="first-req1-<%= @count %>" class="small req1 first <%= status %>">
+		<%= req1.name %>
+	</div>
+	
+	<%= render partial: "second", locals: {req1: req1, status: status, show_orc: show_orc, root: req1} %>
+</div>
