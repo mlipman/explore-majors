@@ -1,5 +1,5 @@
 class Course < ActiveRecord::Base
-	attr_accessible :dept, :num, :title, :desc, :minUnits, :maxUnits
+	attr_accessible :deptCode, :deptNum, :title, :desc, :minUnits, :maxUnits
 	has_and_belongs_to_many :users
 	has_and_belongs_to_many :options
 
@@ -15,7 +15,7 @@ class Course < ActiveRecord::Base
 		Course.find(:all).each do |candidate|
 			# rightnow just string matching on "dept"
 			# after explore courses scrape, add fancier searching
-			if candidate.dept.upcase.include?(qry) && !matchedCourses.include?(candidate)
+			if candidate.deptCode.upcase.include?(qry) && !matchedCourses.include?(candidate)
 				matchedCourses << candidate
 			end
 		end
@@ -31,7 +31,7 @@ class Course < ActiveRecord::Base
 	end
 
 	def name
-		return dept
+		return deptCode + ' ' + deptNum
 	end
 
 end

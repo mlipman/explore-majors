@@ -52,8 +52,9 @@ class UsersController < ApplicationController
 
 	def add_drop_button
 		cn = params[:course_name2]
+		words = cn.split
 		# add in error checking for if isn't set or smthng
-		course = Course.find_by_dept(cn)
+		course = Course.where("deptCode = ? AND deptNum = ?", words[0], words[1]).first
 
 		#logger.debug(course.id)
 		if (@usr.courses.exists?(course.id))

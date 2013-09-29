@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(:version => 20130907051720) do
   end
 
   create_table "courses", :force => true do |t|
-    t.string   "dept"
-    t.string   "num"
+    t.string   "deptCode"
+    t.string   "deptNum"
     t.string   "title"
     t.text     "desc"
     t.integer  "minUnits"

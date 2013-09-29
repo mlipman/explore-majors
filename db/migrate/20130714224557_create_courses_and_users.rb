@@ -7,8 +7,8 @@ class CreateCoursesAndUsers < ActiveRecord::Migration
 			end
 
 			create_table :courses do |t|
-				t.string :dept
-				t.string :num
+				t.string :deptCode
+				t.string :deptNum
 				t.string :title
 				t.text :desc
 				t.integer :minUnits

@@ -1,6 +1,6 @@
 class ExploreController < ApplicationController
 	def index
-		@root = Option.find_by_name("Electrical_Engineering") # was "Symbolic Systems"
+		@root = Option.find_by_name("EE") # was "Symbolic Systems"
 		if @loggedIn
 			@viewer = @usr
 			@visit = false

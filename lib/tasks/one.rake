@@ -6,9 +6,10 @@ task :doit => :environment do
 end
 
 task :dochunks => :environment do
-	data = IO.readlines('chunk_test.txt')
+	data = IO.readlines('ElectricalEngineering.txt') # ElectricalEngineering.txt
 	major = Req.find_by_name('Major')
-	process_chunks(0, data, major, 'req')
+	varr = process_chunks(0, data, major, 'req')
+	puts "varr is #{varr}"
 end
 
 def process_chunks(i, data, parent, parent_type)
@@ -16,11 +17,13 @@ def process_chunks(i, data, parent, parent_type)
 		puts i
 		line = data[i]
 		pieces = line.split(' ')
+		puts "pieces: #{pieces}"
 		case pieces[0]
 		when 'O'
 			opt = Option.new(:name => pieces[1])
 			opt.req = parent
 			opt.save
+			puts "Saved O #{pieces[1]} at i=#{i}"
 			i = process_chunks(i+1, data, opt, 'opt')
 		when 'Ch'
 			chunk = Chunk.new(:name => pieces[1])
@@ -32,6 +35,7 @@ def process_chunks(i, data, parent, parent_type)
 				chunk.chunk = parent
 			end
 			chunk.save
+			puts "Saved Ch #{pieces[1]} at i=#{i}"
 			i = process_chunks(i+1, data, chunk, 'chunk')
 		when 'R'
 			reqq = Req.new(:name => pieces[1])
@@ -43,25 +47,33 @@ def process_chunks(i, data, parent, parent_type)
 				reqq.chunk = parent
 			end
 			reqq.save
+			puts "Saved R #{pieces[1]} at i=#{i}"
 			i = process_chunks(i+1, data, reqq, 'req') # parent type isn't used
 		when 'C'
-			full = pieces[1]
-			course = Course.new(:dept=>full) # TODO find course by dept and num
-			parent.courses << course
+			code = pieces[1].upcase
+			num = pieces[2]
+			myCourse = Course.where("deptCode = ? AND deptNum = ?", code, num)
+			parent.courses << myCourse
 			parent.save
+			puts "Added C #{myCourse} at i=#{i}"
 			i+=1
 		when 'OC'
-			opt = Option.new(:name => pieces[1])
+			opt = Option.new(:name => (pieces[1]+pieces[2]))
 			opt.req = parent
-			course = Course.new(:dept => pieces[1])
-			opt.courses << course
+			code = pieces[1].upcase
+			num = pieces[2]
+			myCourse = Course.where("deptCode = ? AND deptNum = ?", code, num)
+			opt.courses << myCourse
 			opt.save
-			course.save
+			puts "Added C #{myCourse} at i=#{i}"
+			puts "Saved O of OC #{pieces[1]+pieces[2]} at i=#{i}"
 			i+=1
 		else
+			puts "end returning #{i+1}"
 			return i+1
 		end
 	end
+	return i
 end
 
 def process(i, data, parent)
