@@ -6,13 +6,13 @@ class User < ActiveRecord::Base
 	# If a user has completed any of the options for a req
 	# then that user has completed the requirement
 	def completeReq(req)
-		flag = false
+		num_complete = 0
 		req.options.each do |opt|
 			if self.completeOpt(opt)
-				flag = true
+				num_complete += 1
 			end
 		end
-		return flag
+		return num_complete >= req.numReqd
 	end
 
 	# If a user has completed all the reqs and has all of the required
@@ -20,6 +20,9 @@ class User < ActiveRecord::Base
 	# Note: most options will have either reqs or courses, but often not both
 	def completeOpt(opt)
 		flag = true
+		if (opt.chunks.length + opt.reqs.length + opt.courses.length == 0)
+			return false
+		end
 		opt.chunks.each do |ch|
 			if !self.completeCh(ch)
 				flag = false

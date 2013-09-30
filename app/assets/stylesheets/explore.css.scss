@@ -141,7 +141,38 @@
 	}
 }
 
+.majorLink {
+	margin: 20px;
+	color: black;
+	background: #C0C0C0;
+	border: 2px solid black;
+	font-size: 1.5em;
+	font-weight: bold;
+	a:visited {
+		color: black;
+		text-decoration: none;
+	}
+	a:link {
+		color: black;
+		text-decoration: none;
+	}
+	a {
+		display: block;
+	}
+}
 
+h3 {
+	margin: 20px;
+	//color: blue;
+	//border: 2px solid blue;
+	font-size: 1.25em;
+	font-weight: normal;
+
+}
+
+.spacer {
+	height: 100px;
+}
 
 
 

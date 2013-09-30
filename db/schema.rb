@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20130930052422) do
 
   create_table "reqs", :force => true do |t|
     t.string   "name"
+    t.integer  "numReqd"
     t.integer  "option_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

@@ -1,4 +1,4 @@
-O EE
+O Electrical_Engineering(in_progress)
 	Ch Math_and_Science
 		Ch Math
 			Ch Calculus	

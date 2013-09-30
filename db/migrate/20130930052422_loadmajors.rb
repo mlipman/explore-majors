@@ -1,6 +1,6 @@
 class Loadmajors < ActiveRecord::Migration
 	def up
-		major = Req.new(:name => "Major")
+		major = Req.new(:name => "Major", :numReqd => 1)
 		major.save
 
 		data = IO.readlines('symsys_data.txt')
@@ -11,6 +11,9 @@ class Loadmajors < ActiveRecord::Migration
 	end
 
 	def down
+		Req.destroy_all
+		Option.destroy_all
+		Chunk.destroy_all
 	end
 
 
@@ -41,6 +44,12 @@ class Loadmajors < ActiveRecord::Migration
 				i = process_chunks(i+1, data, chunk, 'chunk')
 			when 'R'
 				reqq = Req.new(:name => pieces[1])
+				if (pieces.length>2)
+					numR = pieces[2]
+				else
+					numR = 1
+				end
+				# numR = pieces.length>2 ? pieces[2] : 1
 				if (parent_type=='opt')
 					reqq.opt_parent = 1
 					reqq.option = parent
@@ -48,8 +57,9 @@ class Loadmajors < ActiveRecord::Migration
 					reqq.opt_parent = 0
 					reqq.chunk = parent
 				end
+				reqq.numReqd = numR
 				reqq.save
-				puts "Saved R #{pieces[1]} at i=#{i}"
+				puts "Saved R #{pieces[1]}, numReqd: #{numR} at i=#{i}"
 				i = process_chunks(i+1, data, reqq, 'req') # parent type isn't used
 			when 'C'
 				code = pieces[1].upcase

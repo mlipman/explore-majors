@@ -1,8 +1,18 @@
 <% if !@id %>	
-	pick a major
+	<h1>Pick A Major To Explore!</h1>
+	<% mjr_count = 0 %>
 	<% @mjr.options.each do |major_opt| %>
-		<div><%= link_to major_opt.name, :id=>major_opt.id %></div>
+		<% mjr_count += 1 %>
+		<% str = mjr_count.to_s + '.) ' + major_opt.name %>
+		<div class="majorLink">
+			<a href="/explore/index/<%=major_opt.id%>">
+				<%= major_opt.name %>
+			</a>
+		</div>
 	<% end %>
+	<h3>more majors continuously being added</h3>
+	<div class="spacer"></div>
+	<!-- <div class="demo">Check out our handy guide to see whats going on</div> -->
 <% else %>
 	<div id="content">
 		<h2><%= @root.name %></h2>

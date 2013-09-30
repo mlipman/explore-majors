@@ -2,105 +2,200 @@ O Symbolic_Systems
 	R Intro
 		OC Symsys 100
 	e
-	Ch Calc
-		R Single_Variable
-			O Math20s
-				C Math 19
-				C Math 20
-				C Math 21
+	Ch Continuous_Fundamentals
+		Ch Calculus
+			R Single_Variable
+				O Math20s
+					C Math 19
+					C Math 20
+					C Math 21
+				e
+				O Math40s
+					C Math 41
+					C Math 42
+				e
+				O Math40sACE
+					C Math 41A
+					C Math 42A
+				e
 			e
-			O Math40s
-				C Math 41
-				C Math 42
-			e
-			O Math40sACE
-				C Math 41A
-				C Math 42A
+			R Multi_Variable
+				OC CME 100
+				OC CME 100A
+				OC Math 51
+				OC Math 51A
+				OC Math 51H
 			e
 		e
-		R Multi_Variable
-			OC CME 100
-			OC CME 100A
-			OC Math 51
-			OC Math 51A
-			OC Math 51H
+		R Probability_and_Statistics
+			OC CS 109
+			OC Stats 116
+			OC Stats 110
+			OC MS&E 120
+			OC EE 178
+			OC Math 151
+			OC CME 106
 		e
-	e
-	R CF3ProbStat
-		OC CS 109
-		OC Stats 116
-		OC Stats 110
-		OC MS&E 120
-		OC EE 178
-		OC Math 151
-		OC CME 106
-	e
-	R DiscFundA
-		OC CS 106A
-	e
-	R DiscFundB
-		OC CS 106B
-		OC CS 106X
-	e
-	R DiscFundC
-		OC CS 103
-	e
-	R TechDepthA
-		OC CS 107
-		OC CS 154
-		OC CS 156
-		OC CS 161
-		OC CS 157
-		OC CS 224M
-		OC Econ 160
-		OC MS&E 236
-		OC MS&E 236H
-		OC MS&E 252
-		OC Stats 200
-		OC CS 228
-	e
-	R CogNeuroA
-		OC Psych 45
-		OC Psych 50
-		OC Psych 55
-	e
-	R CogNeuroB
-		OC Bio 20
-		OC Bio 150
-		OC Psych 30
-		OC Psych 45
-		OC Psych 50
-		OC Psych 60
-		OC Psych 70
-		OC Psych 131
-		OC Psych 141
-		OC Psych 154
-	e
-	R LangA
-		OC Ling 1
-		OC Ling 106
-		OC Ling 140
-		OC Psych 131
-	e
-	R LangB
-		OC Ling 110
-		OC Ling 120
-		OC Ling 130A
-	e
-	R Comp
-		OC BioE 341
-		OC CS 121
+	end
+	Ch Discrete_Fundamentals
+		R Beginning_Computing
+			OC CS 106A
+		e
+		R Intermediate_Computing
+			OC CS 106B
+			OC CS 106X
+		e
+		R Logic
+			OC CS 103
+		e
+	end
+	R Technical_Depth 2
+		O Computer_Programming
+			R CS107
+				OC CS 107
+			end
+		end
+		O Computational_Theory
+			R Computational_Theory
+				OC CS 154
+				OC CS 161
+			end
+		end
+		O Logic
+			R Logic
+				OC CS 157
+			end
+		end
+		O Decision_Theory/Game_Theory
+			R Decision_Theory
+				OC CS 224M
+				OC Econ 160
+				OC Econ 180
+				OC MS&E 252
+			end
+		end
+		O Probability_and_Statistics
+			R Probability_and_Statistics
+				OC Stats 200
+				OC CS 228
+			end
+		end
+	end
+	Ch Cognition_and_Neuroscience
+		R Intro_Cognition_and_Neuroscience
+			OC Psych 45
+			OC Psych 50
+			OC Psych 55
+		e
+		R Additional_Cognition_and_Neuroscience 2
+			OC Bio 20
+			OC Bio 150
+			OC Psych 30
+			OC Psych 45
+			OC Psych 50
+			OC Psych 60
+			OC Psych 70
+			OC Psych 131
+			OC Psych 141
+			OC Psych 154
+		e
+	end
+	Ch Natural_Language
+		R Language_and_Mind
+			OC Linguist 1
+			OC Linguist 106
+			OC Linguist 140
+			OC Psych 131
+		e
+		R Linguistic_Theory
+			OC Linguist 110
+			OC Linguist 120
+			OC Linguist 121
+			OC Linguist 130A
+			OC Linguist 130B
+		e
+	end
+	R Computation_and_Cognition
 		OC CS 221
 		OC CS 222
 		OC CS 224M
-		OC CS 227
 		OC CS 228
 		OC CS 229
-		OC Ling 180
-		OC Ling 182
+		OC Linguist 180
+		OC Linguist 182
 		OC Psych 204
 		OC Psych 209
-		OC Psych 209A
 		OC Psych 239
 	e
+	R Seminar
+		OC Psych 237
+		OC Symsys 201
+		OC Symsys 206
+		OC CS 331A
+		OC Linguist 237
+		OC Psych 266
+		OC Symsys 125
+		OC Music 220C
+		OC Psych 145
+		OC Symsys 204
+	end
+	R Concentration
+		O Decision_Making_and_Rationality
+		end
+		O Computer_Music
+		end
+		O Human-Computer_Interaction
+			R CS147
+				OC CS 147
+			end
+			R Project
+				OC CS 247
+				OC CS 194H
+				OC CS 376
+				OC CS 447
+				OC CS 448B
+				OC COMM 268
+				OC EDUC 281X
+			end
+			R Social_aspects
+				OC Comm 120W
+				OC Comm 169
+				OC CS 181
+				OC MS&E 134
+				OC ME 115A
+				OC Psych 70
+				OC CS 378
+				OC Symsys 145
+				OC STS 101
+				OC Symsys 201
+			end
+			R Programming
+				OC CS 108
+				OC Linguist 180
+				OC CS 142
+				OC CS 148
+			end
+			R Empirical_methods
+				OC Anthro 116
+				OC Anthro 155
+				OC Comm 106
+				OC Comm 106S
+				OC Comm 168
+				OC CS 303
+				OC CS 376
+				OC Educ 191X
+				OC Educ 255A
+				OC Humbio 82A
+				OC Med 147
+				OC Polisci 451
+				OC Psych 110
+				OC Psych 252
+				OC Psych 254
+				OC Soc 670
+				OC Stats 191
+				OC Stats 200
+				OC Symsys 130
+			end
+		end
+	end
 end

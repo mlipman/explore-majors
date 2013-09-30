@@ -1,6 +1,6 @@
 class Req < ActiveRecord::Base
   # added opt_parent flag and belongs to chunk
-  attr_accessible :name, :opt_parent
+  attr_accessible :name, :opt_parent, :numReqd
   belongs_to :option
   belongs_to :chunk
   has_many :options

@@ -12,12 +12,14 @@
 			<% else %>
 				<% vrow.each do |d| %>
 					<% if !(d=="nll") %>
-						<% if @visit %>
-							<td class="req1 visitor"><%= d.name %></td>
+						<% if d.class.name=="Course" %>
+							<% if @visit %>
+								<td class="req1 visitor"><%= d.name %></td>
+							<% else %>
+								<td class="req1 <%= d.status(@viewer) %>"><%= d.name %>	</td>
+							<% end %>
 						<% else %>
-							<td class="req1 <%= d.status(@viewer) %>">
-								<%= d.name %>
-							</td>
+							<td><%= render partial: "wrap", locals: {req1: d, show_orc: true} %></td>
 						<% end %>
 					<% else %>
 						<td></td>
