@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907051720) do
+ActiveRecord::Schema.define(:version => 20130930052422) do
 
   create_table "chunks", :force => true do |t|
     t.string   "name"

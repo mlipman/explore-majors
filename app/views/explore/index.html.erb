@@ -1,4 +1,11 @@
-<div id="content">
-	<h2><%= @root.name %></h2>
-	<%= render partial: "zip", locals: {root: @root} %>
-</div>
+<% if !@id %>	
+	pick a major
+	<% @mjr.options.each do |major_opt| %>
+		<div><%= link_to major_opt.name, :id=>major_opt.id %></div>
+	<% end %>
+<% else %>
+	<div id="content">
+		<h2><%= @root.name %></h2>
+		<%= render partial: "zip", locals: {root: @root} %>
+	</div>
+<% end %>

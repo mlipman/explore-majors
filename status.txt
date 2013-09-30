@@ -124,8 +124,8 @@ rake dochunks (takes about 3 minutes)
 
 todo
 sets
-line color
-chunk fulfilled
+line color done
+chunk fulfilled done
 pick your major
 
 
