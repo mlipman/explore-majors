@@ -67,7 +67,7 @@ class Loadmajors < ActiveRecord::Migration
 			when 'C'
 				code = pieces[1].upcase
 				num = pieces[2]
-				myCourse = Course.where("deptCode = ? AND deptNum = ?", code, num)
+				myCourse = Course.where("\"deptCode\" = ? AND \"deptNum\" = ?", code, num)
 				parent.courses << myCourse
 				parent.save
 				puts "Added C #{myCourse} at i=#{i}"
@@ -77,7 +77,7 @@ class Loadmajors < ActiveRecord::Migration
 				opt.req = parent
 				code = pieces[1].upcase
 				num = pieces[2]
-				myCourse = Course.where("deptCode = ? AND deptNum = ?", code, num)
+				myCourse = Course.where("\"deptCode\" = ? AND \"deptNum\" = ?", code, num)
 				opt.courses << myCourse
 				opt.save
 				puts "Added C #{myCourse} at i=#{i}"

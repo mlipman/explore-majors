@@ -54,7 +54,7 @@ class UsersController < ApplicationController
 		cn = params[:course_name2]
 		words = cn.split
 		# add in error checking for if isn't set or smthng
-		course = Course.where("deptCode = ? AND deptNum = ?", words[0], words[1]).first
+		course = Course.where("\"deptCode\" = ? AND \"deptNum\" = ?", words[0], words[1]).first
 
 		#logger.debug(course.id)
 		if (@usr.courses.exists?(course.id))
