@@ -5,8 +5,11 @@ class Chunk < ActiveRecord::Base
 	has_many :chunks
 	has_many :reqs
 
-	# needs a status
-	def status(viewer)
-		return "todo" # for now
-	end
+  def status(viewre)
+    if viewre.completeCh(self)
+      return "completed"
+    else 
+      return "todo" 
+    end
+  end
 end

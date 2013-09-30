@@ -7,6 +7,13 @@ class Option < ActiveRecord::Base
   # added
   has_many :chunks
 
+  def status(viewre)
+    if viewre.completeOpt(self)
+      return "completed"
+    else 
+      return "todo" 
+    end
+  end
 
 
 end

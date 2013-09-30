@@ -20,6 +20,11 @@ class User < ActiveRecord::Base
 	# Note: most options will have either reqs or courses, but often not both
 	def completeOpt(opt)
 		flag = true
+		opt.chunks.each do |ch|
+			if !self.completeCh(ch)
+				flag = false
+			end
+		end
 		opt.reqs.each do |req|
 			if !self.completeReq(req)
 				flag = false
@@ -27,6 +32,23 @@ class User < ActiveRecord::Base
 		end
 		opt.courses.each do |course|
 			if !self.courses.exists?(course.id)
+				flag = false
+			end
+		end
+		return flag
+	end
+
+	# A user has completed a chunk when have have done all of its
+	# reqs and sub-chunks
+	def completeCh(ch)
+		flag = true
+		ch.chunks.each do |ch2|
+			if !self.completeCh(ch2)
+				flag = false
+			end
+		end
+		ch.reqs.each do |r|
+			if !self.completeReq(r)
 				flag = false
 			end
 		end

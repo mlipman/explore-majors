@@ -6,7 +6,7 @@ task :doit => :environment do
 end
 
 task :dochunks => :environment do
-	data = IO.readlines('ElectricalEngineering.txt') # ElectricalEngineering.txt
+	data = IO.readlines('symsys_data.txt') # ElectricalEngineering.txt
 	major = Req.find_by_name('Major')
 	varr = process_chunks(0, data, major, 'req')
 	puts "varr is #{varr}"

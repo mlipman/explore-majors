@@ -5,7 +5,7 @@
 		<tr>
 			<% if first %>
 				<% vrow.each do |d| %>
-					<th><%= d.name %></th>
+					<th class="<%= @visit ? "visitor" : d.status(@viewer)%>"><%= d.name %></th>
 				<% end %>
 
 				<% first = false %>										

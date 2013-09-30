@@ -38,8 +38,6 @@ end
 
 desc "Second custom task"
 task :cus2 => :environment do
-	Option.destroy_all
-	Req.destroy_all
-	Chunk.destroy_all
+	Option.destroy(703)
 	puts "orch destroyed"
 end

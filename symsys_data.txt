@@ -1,189 +1,106 @@
-R Intro
-	OC Symsys100
-e
-R CF1SVCalc
-	OC AP10UMath
-	O Math20s
-		C Math19
+O Symbolic_Systems
+	R Intro
+		OC Symsys 100
+	e
+	Ch Calc
+		R Single_Variable
+			O Math20s
+				C Math 19
+				C Math 20
+				C Math 21
+			e
+			O Math40s
+				C Math 41
+				C Math 42
+			e
+			O Math40sACE
+				C Math 41A
+				C Math 42A
+			e
 		e
-		C Math20
-		e
-		C Math21
+		R Multi_Variable
+			OC CME 100
+			OC CME 100A
+			OC Math 51
+			OC Math 51A
+			OC Math 51H
 		e
 	e
-	O Math40s
-		C Math41
-		e
-		C Math42
-		e
+	R CF3ProbStat
+		OC CS 109
+		OC Stats 116
+		OC Stats 110
+		OC MS&E 120
+		OC EE 178
+		OC Math 151
+		OC CME 106
 	e
-	O Math40sACE
-		C Math41A
-		e
-		C Math42A
-		e
+	R DiscFundA
+		OC CS 106A
 	e
-	OC Other100
-e
-R CF2MVCalc
-	OC CME100
-	OC CME100A
-	OC Math51
-	OC Math51A
-	OC Math51H
-e
-R CF3ProbStat
-	OC CS109
-	OC Stats116
-	OC Stats110
-	OC MS&E120
-	OC EE178
-	OC Math151
-	OC CME106
-e
-R DiscFundA
-	OC CS106A
-	OC Other100
-e
-R DiscFundB
-	OC CS106B
-	OC CS106X
-e
-R DiscFundC
-	OC CS103
-	OC Phil150
-	OC Phil50E
-e
-R TechDepthA
-	OC CS107
-	OC CS154
-	OC CS156
-	OC CS161
-	OC Phil151A
-	OC CS157
-	OC Phil151
-	OC Phil152
-	OC Phil154
-	OC CS224M
-	OC Econ160
-	OC MS&E236
-	OC MS&E236H
-	OC MS&E252
-	OC Stats200
-	OC CS228
-e
-R TechDepthB
-	OC CS107
-	OC CS154
-	OC CS156
-	OC CS161
-	OC Phil151A
-	OC CS157
-	OC Phil151
-	OC Phil152
-	OC Phil154
-	OC CS224M
-	OC Econ160
-	OC MS&E236
-	OC MS&E236H
-	OC MS&E252
-	OC Stats200
-	OC CS228
-e
-R Phillvl1
-	OC Phil1
-	OC Phil2
-	OC Phil60
-	OC Phil102
-	O IHumPhilSci
-		C IHum10A
-		e
-		C IHum10B
-		e
+	R DiscFundB
+		OC CS 106B
+		OC CS 106X
 	e
-	O IHumFateReason
-		C IHum23A
-		e
-		C IHum23B
-		e
+	R DiscFundC
+		OC CS 103
 	e
-	OR IHum67
-	O SLE
-		C SLE91
-		e
-		C SLE92
-		e
-		C SLE93
-		e
+	R TechDepthA
+		OC CS 107
+		OC CS 154
+		OC CS 156
+		OC CS 161
+		OC CS 157
+		OC CS 224M
+		OC Econ 160
+		OC MS&E 236
+		OC MS&E 236H
+		OC MS&E 252
+		OC Stats 200
+		OC CS 228
 	e
-	OC Other100
-e
-R Phillvl2
-	OC Phil80
-e
-R Phillvl3
-	OC Phil162
-	OC Phil164
-	OC Phil166
-	OC Phil167D
-	OC Phil168
-	OC Phil169
-	OC Phil180
-	OC Phil180A
-	OC Phil181
-	OC Phil182
-	OC Phil184
-	OC Phil184B
-	OC Phil184F
-	OC Phil184P
-	OC Phil185
-	OC Phil185B
-	OC Phil186
-	OC Phil187
-	OC Phil188
-	OC Phil189
-e
-R CogNeuroA
-	OC Psych45
-	OC Psych50
-	OC Psych55
-e
-R CogNeuroB
-	OC Bio20
-	OC Bio150
-	OC Psych30
-	OC Psych45
-	OC Psych50
-	OC Psych60
-	OC Psych70
-	OC Psych131
-	OC Psych141
-	OC Psych154
-e
-R LangA
-	OC Ling1
-	OC Ling106
-	OC Ling140
-	OC Psych131
-e
-R LangB
-	OC Ling110
-	OC Ling120
-	OC Ling130A
-e
-R Comp
-	OC BioE341
-	OC CS121
-	OC CS221
-	OC CS222
-	OC CS224M
-	OC CS227
-	OC CS228
-	OC CS229
-	OC Ling180
-	OC Ling182
-	OC Psych204
-	OC Psych209
-	OC Psych209A
-	OC Psych239
-e
+	R CogNeuroA
+		OC Psych 45
+		OC Psych 50
+		OC Psych 55
+	e
+	R CogNeuroB
+		OC Bio 20
+		OC Bio 150
+		OC Psych 30
+		OC Psych 45
+		OC Psych 50
+		OC Psych 60
+		OC Psych 70
+		OC Psych 131
+		OC Psych 141
+		OC Psych 154
+	e
+	R LangA
+		OC Ling 1
+		OC Ling 106
+		OC Ling 140
+		OC Psych 131
+	e
+	R LangB
+		OC Ling 110
+		OC Ling 120
+		OC Ling 130A
+	e
+	R Comp
+		OC BioE 341
+		OC CS 121
+		OC CS 221
+		OC CS 222
+		OC CS 224M
+		OC CS 227
+		OC CS 228
+		OC CS 229
+		OC Ling 180
+		OC Ling 182
+		OC Psych 204
+		OC Psych 209
+		OC Psych 209A
+		OC Psych 239
+	e
+end
