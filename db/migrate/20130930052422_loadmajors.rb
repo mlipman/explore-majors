@@ -1,5 +1,8 @@
 class Loadmajors < ActiveRecord::Migration
 	def up
+		Req.reset_column_information
+		Option.reset_column_information
+		Chunk.reset_column_information
 		major = Req.new(:name => "Major", :numReqd => 1)
 		major.save
 
