@@ -11,19 +11,3 @@
 <div id="search_results">
 		<%= render partial: "course", collection: @searchResults, as: :course  %>
 </div>
-
-
-<div class="hide reqs_by_completion">
-	<h2>Completed Reqs</h2>
-	<ul>
-		<% @completed_reqs.each do |req| %>
-			<li><%= req.inspect %></li>
-		<% end %>
-	</ul>
-	<h2>Not Completed Reqs</h2>
-	<ul>
-		<% @todo_reqs.each do |req| %>
-			<li><%= req.inspect %></li>
-		<% end %>
-	</ul>
-</div>

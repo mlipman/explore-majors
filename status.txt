@@ -122,11 +122,13 @@ rake readcourses
 rake dochunks (takes about 3 minutes)
 
 
-todo
-sets
+todo - ALL Done
+sets - done
 line color done
 chunk fulfilled done
-pick your major
+pick your major done
+
+add chunks to option display, in getORCTable and when checking class.name
 
 
 

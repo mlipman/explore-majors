@@ -4,11 +4,12 @@ $(document).ready(function(){
 	//console.log(searchBox);
 	var url = "/users/ajaxHandler?qry=";
 
-	searchBox.onkeyup = function(event) {
+	// Commented out until it can be fast
+	/*searchBox.onkeyup = function(event) {
 		// console.log(searchBox.value);
 		url = "/users/ajaxHandler?qry=" + encodeURIComponent(searchBox.value);
 		var mine = new Searcher(myXHR, "search_results", url);
-	}
+	}*/
 
 	$(document).ajaxComplete(function(){
 		console.log("ajax complete");
