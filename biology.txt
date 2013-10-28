@@ -1,0 +1,114 @@
+O Biology
+	Ch Core
+		R Bio41
+			OC Bio 41
+		end
+		R Bio42
+			OC Bio 42
+		end
+		R Bio43
+			OC Bio 43
+			OC Biohopk 43
+		end
+		R Bio44X
+			OC Bio 44X
+		end
+		R Bio44Y
+			OC Bio 44Y
+			OC Biohopk 44Y
+		end
+	end
+	Ch Foundational_Bredth
+		Ch Chemistry
+			R Chem31A
+				O Chem31AB
+					C Chem 31A
+					C Chem 31B
+				end
+				OC Chem 31X
+			end
+			R OChemI
+				OC Chem 33
+				OC Chem 1
+			end
+			R OChemII
+				OC Chem 35
+				OC Chem 2
+			end
+			R OChemLab
+				OC Chem 36
+				O Chem1L2L
+					C Chem 1L
+					C Chem 2L
+				end
+			end
+			R Chem130
+				OC Chem 130
+				O Chem2L3L
+					C Chem 2L
+					C Chem 3L
+				end
+			end
+			R Chem131
+				OC Chem 131
+				OC Chem 3
+			end
+			R PChem
+				OC Chem 135
+				OC Chem 171
+			end
+		end
+		R Physics
+			O 20s
+				C Physics 21
+				C Physics 22
+				C Physics 23
+				C Physics 24
+			end
+			O 40s
+				C Physics 41
+				C Physics 43
+				C Physics 45
+			end
+		end
+		Ch Math
+			R Calculus
+				O 20s
+					C Math 19
+					C Math 20
+					C Math 21
+				end
+				O 40s
+					C Math 41
+					C Math 42
+				end
+			end
+			R Linear_Algebra
+				OC Math 51
+			end
+		end
+		R Additional
+			OC Biohopk 174H
+			OC Biostats 141
+			OC CS 106A
+			OC Math 51
+			OC Stats 60
+		end
+	end
+	R WIM
+		OC Bio 137
+		OC Bio 145
+		OC Bio 196A
+		OC Bio 197WA
+		OC Bio 199W
+		OC Biohopk 44Y
+		OC Biohopk 184H
+	end
+end
+
+
+
+
+
+
+

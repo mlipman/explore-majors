@@ -11,6 +11,9 @@ class Loadmajors < ActiveRecord::Migration
 
 		data2 = IO.readlines('ElectricalEngineering.txt')
 		process_chunks(0, data2, major, 'req')
+
+		data3 = IO.readlines('biology.txt')
+		process_chunks(0, data3, major, 'req')
 	end
 
 	def down

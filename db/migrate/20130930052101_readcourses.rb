@@ -1,7 +1,7 @@
 class Readcourses < ActiveRecord::Migration
   def up
   	Course.reset_column_information
-	data = IO.readlines('FirstData.txt')
+	data = IO.readlines('SlimData.txt')
 	arr = JSON.parse(data[0])
 	count = 0
 	arr.each do |crs|

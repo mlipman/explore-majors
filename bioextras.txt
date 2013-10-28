@@ -1,0 +1,54 @@
+bioextras.txt
+
+R Electives 3
+		O Molecular
+			C Bio 104
+			C Bio 113
+			C Bio 118
+			C Bio 160A
+			C Bio 160B
+			C Bio 188
+			C Bio 189
+			C Bio 230
+			C Cbio 101
+			C CEE 274A
+		end
+		Cell/Developmental
+			C Bio 118
+			C Bio 129A
+			C Bio 129B
+			C Bio 137
+			C Bio 154
+			C Bio 158
+			C Bio 160A
+			C Bio 160B
+			C Bio 171
+			C Bio 230
+			C CBio 101
+			C CEE 274A
+		end
+		O Organismal
+			OC Bio 118
+			OC Bio 129A
+			OC Bio 129B
+			C Bio 137
+			C Bio 154
+			C Bio 158
+			C Bio 160A
+			C Bio 160B
+			C Bio 230
+			C CBio 101
+			C CEE 274A
+		end
+	C Bio 101
+	C Bio 113
+	C Bio 121
+	C Bio 136
+	C Bio 143
+	C Bio 144
+	C Bio 145
+	C Bio 182
+	C Biohopk 163H
+	C Biohopk 185H
+	C Biohopk 172H
+	C CEE 274A
