@@ -17,3 +17,5 @@ get purple option headers some text decoration
 set color based on option completion
 
 two symsys 130's??
+
+slimData vs SlimData issue
